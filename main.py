@@ -1,1 +1,3 @@
-print("первая строка в этом проекте")
+import aiogram
+
+print(aiogram.__version__)
