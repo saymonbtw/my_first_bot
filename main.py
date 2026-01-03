@@ -1,3 +1,10 @@
-import aiogram
+from dataclasses import dataclass
 
-print(aiogram.__version__)
+
+@dataclass
+class TgBot:
+    token: str
+    admin_id: list[int]
+
+
+bot = TgBot("8507449795:AAEmUJNNu0SnLzzKdDWIhHBWh4nBWmVQ_1o", [835613839])
