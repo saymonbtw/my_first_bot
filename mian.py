@@ -13,10 +13,12 @@ class TgBot:
 
 
 token = os.getenv("BOT_TOKEN")
-admin_ids = list(map(int, os.getenv("ADMIN_IDS").split(",")))
+admin_raw = os.getenv("ADMIN_IDS")
 
-if not token or not admin_ids:
+if not token or not admin_raw:
     raise RuntimeError("ошибка чтения файла с данными бота")
 
-bot = TgBot(token=token, admin_ids=admin_ids)
+admin_raw = [int(x) for x in admin_raw.split(",")]
+
+bot = TgBot(token=token, admin_ids=admin_raw)
 print(bot)
