@@ -47,4 +47,3 @@ if not all([db.host, db.user, db.password, db.database]):
     raise RuntimeError("ошибка чтения данных БД")
 
 config = Config(bot=bot, db=db)
-finally
