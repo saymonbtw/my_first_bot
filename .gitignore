@@ -1,2 +1,10 @@
+# secrets
 bot_info.env
-config.py
+*.env
+
+# python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
